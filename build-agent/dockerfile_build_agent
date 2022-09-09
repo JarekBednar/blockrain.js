@@ -1,0 +1,11 @@
+FROM node:latest
+
+RUN apt-get update
+RUN apt-get install -y git
+
+RUN git clone  https://github.com/JarekBednar/blockrain.js.git
+
+WORKDIR blockrain
+
+RUN npm install
+RUN npm run build
