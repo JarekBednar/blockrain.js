@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:8
 
 RUN apt-get update
 RUN apt-get install -y git
@@ -9,3 +9,4 @@ WORKDIR blockrain
 
 RUN npm install
 RUN npm run build
+RUN npm install gulp
